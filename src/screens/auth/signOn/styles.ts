@@ -17,6 +17,8 @@ export const styles = StyleSheet.create({
   },
   informationContainer: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   intormationText: {
     fontWeight: 'bold',

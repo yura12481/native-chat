@@ -1,11 +1,9 @@
 import React from 'react';
 
-import Main from './src/screens/auth/main/Main';
-import SignIn from './src/screens/auth/signIn/SignIn';
-import SignOn from './src/screens/auth/signOn/SignOn';
+import Navigation from './src/navigation/Navigation';
 
 const App: React.FC = () => {
-  return <SignIn />;
+  return <Navigation />;
 };
 
 export default App;
