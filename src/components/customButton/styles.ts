@@ -10,6 +10,6 @@ export const styles = StyleSheet.create({
     color: '#ffffff',
     fontWeight: 'bold',
     textAlign: 'center',
-    padding: 8,
+    padding: 9,
   },
 });

@@ -7,6 +7,9 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 16,
     backgroundColor: '#667085',
   },
+  keyboardContainer: {
+    flex: 1,
+  },
   title: {
     textAlign: 'center',
     fontSize: 30,
