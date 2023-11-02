@@ -13,7 +13,7 @@ import { Props } from './types';
 
 import { styles } from './styles';
 
-const Form: React.FC<Props> = ({ title }) => {
+const Form: React.FC<Props> = ({ title, onSub }) => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [checkValidEmail, setCheckValidEmail] = useState<boolean>(false);
@@ -57,7 +57,23 @@ const Form: React.FC<Props> = ({ title }) => {
       ) : (
         <Text></Text>
       )}
-      <CustomButton title={title} />
+      {checkValidEmail || checkValidPassword ? (
+        <CustomButton
+          title={title}
+          onSub={onSub}
+          email={email}
+          password={password}
+          disabled={true}
+        />
+      ) : (
+        <CustomButton
+          title={title}
+          onSub={onSub}
+          email={email}
+          password={password}
+          disabled={false}
+        />
+      )}
     </View>
   );
 };

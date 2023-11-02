@@ -3,7 +3,7 @@ import { View, Image, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { RootStackParams } from '../../../navigation/types';
+import { RootStackParams } from '../../../navigation/authStack/types';
 
 import { styles } from './styles';
 
@@ -21,12 +21,11 @@ const Main: React.FC = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParams>>();
 
+  const mainImage = '../../../../assets/images/main.png';
+
   return (
     <View style={container}>
-      <Image
-        style={mainLogo}
-        source={require('../../../../assets/images/main.png')}
-      />
+      <Image style={mainLogo} source={require(mainImage)} />
       <View style={buttonsContainer}>
         <TouchableOpacity
           style={signInButton}
